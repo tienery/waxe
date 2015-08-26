@@ -1,6 +1,7 @@
 ndll/*
 project/obj/*
 lib/*
+wxWidgets/*
 
 samples/00-Minimal/bin/*
 samples/00-Minimal/waxe.ndll

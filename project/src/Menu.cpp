@@ -59,7 +59,7 @@ value wx_menu_append_submenu(value inMenu, value inText, value inHelp)
 	wxMenu *menu;
 	if (ValueToWX(inMenu,menu))
 	{
-		menu->AppendSubMenu(inMenu, Val2Str(inText), Val2Str(inHelp));
+		menu->AppendSubMenu(menu, Val2Str(inText), Val2Str(inHelp));
 	}
 
 	return alloc_null();
