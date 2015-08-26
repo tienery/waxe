@@ -54,6 +54,18 @@ value wx_menu_append(value inMenu, value inID, value inLable, value inHelp, valu
 
 DEFINE_PRIM(wx_menu_append,5)
 
+value wx_menu_append_submenu(value inMenu, value inText, value inHelp)
+{
+	wxMenu *menu;
+	if (ValueToWX(inMenu,menu))
+	{
+		menu->AppendSubMenu(inMenu, Val2Str(inText), Val2Str(inHelp));
+	}
+
+	return alloc_null();
+}
+
+DEFINE_PRIM(wx_menu_append_submenu,3)
 
 value wx_menu_append_separator(value inMenu)
 {
